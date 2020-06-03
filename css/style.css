@@ -4841,7 +4841,7 @@ h6 {
 /* line 347, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_elements.scss */
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
-  background: #f9f9ff;
+  /*ackground: #f9f9ff;*/
   border-left: 2px solid #ff005e;
 }
 
