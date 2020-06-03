@@ -3,6 +3,11 @@
 /**************** common css start ****************/
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|Roboto:400,500,700&display=swap");
 /* line 3, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_common.scss */
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
 body {
   font-family: "Roboto", sans-serif;
   padding: 0;
