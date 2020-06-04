@@ -38,6 +38,7 @@
 	<!-- font awesome CSS -->
     <link rel="stylesheet" href="css/all.css">
 	<script src="js/portfolio/modernizr-custom.js"></script>
+	<link rel='stylesheet' href='css/ekko-lightbox.css'>
 </head>
 
 <body>
@@ -102,65 +103,29 @@
         </div>
     </section>
     <!-- breadcrumb start-->
-	
+	<br>
 	<!-- container -->
 	<!-- Galeria -->
 	<div class="container">
-		<div class="content">
-			<div class="grid">
-			<!-- Item -->
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/1.png" class="img-wrap"><img src="img/gallery/feminino/1.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/2.png" class="img-wrap"><img src="img/gallery/feminino/2.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="2048x1365">
-					<a href="img/gallery/feminino/3.png" class="img-wrap"><img src="img/gallery/feminino/3.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/4.png" class="img-wrap"><img src="img/gallery/feminino/4.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/5.png" class="img-wrap"><img src="img/gallery/feminino/5.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="2048x1365">
-					<a href="img/gallery/feminino/6.png" class="img-wrap"><img src="img/gallery/feminino/6.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/7.png" class="img-wrap"><img src="img/gallery/feminino/7.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-				<div class="grid__item" data-size="1365x2048">
-					<a href="img/gallery/feminino/8.png" class="img-wrap"><img src="img/gallery/feminino/8.png" />
-						<!--<div class="description description--grid"></div>-->
-					</a>
-				</div>
-			</div>
-			<!-- /grid -->
-			<div class="preview">
-				<button class="action action--close"><i class="fa fa-times" style="font-size: xxx-large;"></i><span class="text-hidden">Close</span></button>
-				<div class="description description--preview"></div>
-			</div>
-			<!-- /preview -->
-		</div>
-		<!-- /content -->
+	  <div class="row justify-content-center align-items-center">
+		<a href="img/gallery/feminino/1.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/1.png" class="img-fluid rounded"></a>
+		<a href="img/gallery/feminino/2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/2.png" class="img-fluid rounded"></a>
+		<a href="img/gallery/feminino/3.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-6"><img src="img/gallery/feminino/3.png" class="img-fluid rounded"></a>
+	  </div>
+	  
+	  <div class="row justify-content-center align-items-center">
+	  <a href="img/gallery/feminino/6.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-6"><img src="img/gallery/feminino/6.png" class="img-fluid rounded"></a>
+	  <a href="img/gallery/feminino/4.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/4.png" class="img-fluid rounded"></a>
+	  <a href="img/gallery/feminino/5.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/5.png" class="img-fluid rounded"></a>
+	  </div>
+	  
+	  <div class="row justify-content-center align-items-center">
+	  <a href="img/gallery/feminino/7.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/7.png" class="img-fluid rounded"></a>
+	  <a href="img/gallery/feminino/8.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="img/gallery/feminino/8.png" class="img-fluid rounded"></a>
+	  </div>
 	</div>
 	<!-- /container -->
-	
+	<br>
 	    <!--::footer_part start::-->
     <footer class="footer-area">
         <div class="container">
@@ -262,9 +227,15 @@ Copyright &copy; <script>document.write(new Date().getFullYear());</script> Todo
 	<script src="js/portfolio/masonry.pkgd.min.js"></script>
 	<script src="js/portfolio/classie.js"></script>
 	<script src="js/portfolio/main.js"></script>
-	
+	<script src='js/ekko-lightbox.min.js'></script>
 	<script>
-	
+	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+            alwaysShowClose: true
+        });
+    })
+	//# sourceURL=pen.js
 		(function() {
 			// create SVG circle overlay and append it to the preview element
 			function createCircleOverlay(previewEl) {
